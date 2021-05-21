@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{siteTitle}}</title>
+    {{>external_stylesheets}}
+    <link rel="stylesheet" href="/css/styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            {{>header}}
+            <h2>{{pageTitle}}</h2>
+            <p>{{content}}</p>
+
+            <form class="weather-search" action="">
+                <input type="text" name="address" placeholder="Location">
+                <button type="submit">Search</button>
+            </form>
+            <h2>Result:</h2>
+            <div class="forecast-result">
+                <p class="error"></p>
+                <p class="weather-data"></p>
+            </div>
+        </div>
+
+        
+        {{>footer}}
+
+        <script src="/js/app.js"></script>
+    </div>
+    
+</body>
+</html>
